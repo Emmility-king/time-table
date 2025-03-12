@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #64748b;
+  --accent: #8b5cf6;
+  --background: #f3f4f6;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+body {
+  @apply bg-gray-100 text-gray-900 min-h-screen font-sans;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+h1 {
+  @apply text-3xl font-bold text-center mb-6;
+  color: var(--primary);
+}
+
+button {
+  @apply px-4 py-2 rounded shadow-md transition-transform transform hover:scale-105;
+}
+
+button.primary {
+  background-color: var(--primary);
+  color: var(--card);
+}
+
+button.primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  @apply rounded-lg shadow-md;
+}
+
+.accent-border {
+  border-color: var(--accent);
+}
+
+.theme-dark {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary: #94a3b8;
+  --accent: #a78bfa;
+  --background: #1f2937;
+  --foreground: #f9fafb;
+  --card: #374151;
+  --border: #4b5563;
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 2cm;
+  }
+  
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  .print-only {
+    display: block;
+  }
+  
+  .no-print {
+    display: none;
+  }
+}
+
