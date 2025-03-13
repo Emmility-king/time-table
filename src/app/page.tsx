@@ -1,6 +1,7 @@
 'use client';
 import { useState } from "react";
 
+
 interface TimetableEntry {
   lecturer: string;
   subject: string;
